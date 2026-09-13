@@ -20,12 +20,13 @@
             font-family: 'Quicksand', sans-serif;
             color: var(--text-color);
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            overflow-x: hidden;
+            box-sizing: border-box;
         }
 
         .container {
@@ -33,7 +34,7 @@
             border: 4px solid var(--secondary-color);
             border-radius: 20px;
             box-shadow: 0 8px 25px rgba(255, 105, 180, 0.2);
-            width: 90%;
+            width: 100%;
             max-width: 600px;
             padding: 30px;
             text-align: center;
@@ -101,8 +102,11 @@
             text-align: left;
         }
 
-        .spotify-container {
-            margin-top: 20px;
+        /* Spotify Player ditaruh di luar kotak utama agar tidak ikut ter-refresh */
+        .spotify-wrapper {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 15px;
             border-radius: 12px;
             overflow: hidden;
         }
@@ -113,18 +117,18 @@
     <div class="container" id="main-container">
         <div class="pixel-art">🐱💖🐶</div>
         <h1>Haii, Seseorang yang Gemesin! 👋</h1>
-        <p>Aku bikin ini khusus buat kamu. Isinya hal-hal seru dan manis. Mau lihat apa isi di dalamnya?</p>
+        <p>Aku bikin khusus buat kamu nih. Isinya hal-hal seru. Mau lihat apa isi di dalamnya?</p>
         
         <div class="btn-group">
             <button onclick="bukaMenu('kuis')">✨ Kuis Gombal</button>
             <button onclick="bukaMenu('pesan')">💌 Pesan Rahasia</button>
             <button onclick="bukaMenu('gombalan')">🌸 Kata-kata Manis</button>
         </div>
+    </div>
 
-        <!-- PEMUTAR MUSIK SPOTIFY -->
-        <div class="spotify-container">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3be9ACTxtcL6Zm4vJRUiPG?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
+    <!-- PEMUTAR MUSIK SPOTIFY (DITARUH DI LUAR KOTAK UTAMA) -->
+    <div class="spotify-wrapper">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3be9ACTxtcL6Zm4vJRUiPG?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
 
     <script>
@@ -146,7 +150,7 @@
                 container.innerHTML = `
                     <h1>💌 Pesan Rahasia Buat Kamu</h1>
                     <div class="card-box">
-                        <p>Makasih ya udah jadi salah satu alasan aku sering senyum-senyum sendiri belakangan ini. Tetap jadi diri kamu yang ceria dan lucu, ya! ✨</p>
+                        <p>Makasih ya udah jadi salah satu alasan aku sering senyum-senyum sendiri belakangan ini. Tetap jadi diri kamu yang ceria dan menyenangkan, ya! ✨</p>
                     </div>
                     <br>
                     <button onclick="kembaliKeUtama()" style="background-color: #ccc;">⬅️ Kembali</button>
