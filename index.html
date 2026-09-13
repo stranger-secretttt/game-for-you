@@ -101,32 +101,30 @@
             text-align: left;
         }
 
-        .music-notice {
-            font-size: 12px;
-            color: #888;
-            margin-top: 15px;
+        .spotify-container {
+            margin-top: 20px;
+            border-radius: 12px;
+            overflow: hidden;
         }
     </style>
 </head>
 <body>
 
-    <!-- PEMUTAR MUSIK YOUTUBE (TERSEMBUNYI) -->
-    <div style="display: none;">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/ylZTusR1K_o?autoplay=1&loop=1&playlist=ylZTusR1K_o" frameborder="0" allow="autoplay"></iframe>
-    </div>
-
     <div class="container" id="main-container">
         <div class="pixel-art">🐱💖🐶</div>
         <h1>Haii, Seseorang yang Gemesin! 👋</h1>
-        <p>Aku bikin halaman kecil khusus buat kamu nih. Isinya hal-hal seru dan manis buat bikin hari kamu makin ceria. Mau lihat apa di dalamnya?</p>
+        <p>Aku bikin ini khusus buat kamu. Isinya hal-hal seru dan manis. Mau lihat apa isi di dalamnya?</p>
         
         <div class="btn-group">
             <button onclick="bukaMenu('kuis')">✨ Kuis Gombal</button>
             <button onclick="bukaMenu('pesan')">💌 Pesan Rahasia</button>
             <button onclick="bukaMenu('gombalan')">🌸 Kata-kata Manis</button>
         </div>
-        
-        <div class="music-notice">🎵 Sentuh tombol atau layar mana saja untuk menikmati lagunya ya!</div>
+
+        <!-- PEMUTAR MUSIK SPOTIFY -->
+        <div class="spotify-container">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3be9ACTxtcL6Zm4vJRUiPG?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
     </div>
 
     <script>
@@ -194,4 +192,3 @@
 
 </body>
 </html>
-
